@@ -38,6 +38,17 @@ window.addEventListener("load", () => {
 });
 
 
- 
+// Carrega o som apenas uma vez
+const popSound = new Audio('klik.mp3');
+popSound.volume = 0.02; // volume baixo para não ser incômodo
 
-  
+// Seleciona todos os botões de aba
+const btn = document.querySelectorAll('.btn');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Recarrega o som (para poder tocar repetidamente)
+    popSound.currentTime = 0;
+    popSound.play();
+  });
+});
