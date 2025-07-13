@@ -40,7 +40,7 @@ window.addEventListener("load", () => {
 
 // Carrega o som apenas uma vez
 const popSound = new Audio('klik.mp3');
-popSound.volume = 0.02; // volume baixo para não ser incômodo
+popSound.volume = 0.03; // volume baixo para não ser incômodo
 
 // Seleciona todos os botões de aba
 const btn = document.querySelectorAll('.btn');
