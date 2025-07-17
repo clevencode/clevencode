@@ -7,7 +7,7 @@
 
 body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 99%);
   scrollbar-width: none;
 }
 
@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
 /* ============== TIPOGRAFIA ============== */
 h1, .hero-sub-p {
   text-align: center;
-  color: hsl(228, 10%, 90%);
+  color: hsl(228, 10%, 20%);
 }
 
 h1 {
@@ -39,9 +39,9 @@ a {
   padding: 1rem;
   margin: 0 20px;
   border-radius: 0 0 30px 30px;
-  background: hsl(0, 0%, 20%);
+  background: hsl(0, 0%, 100%);
   box-shadow:
-    0px 10px 90px hsla(0, 0%, 10%);
+    0px 20px 40px hsla(0, 0%, 33%, 0.1);
   
 }
 
@@ -56,13 +56,13 @@ a {
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
-color: hsl(228, 10%, 90%);
+  color: hsl(0, 0%, 30%);
   font-weight: 700;
   font-size: 1.1rem;
   border: none;
   box-shadow:
-     3px 3px 3px rgba(0, 0, 0, 1),
-    -3px -3px 3px rgba(255, 255, 255, 0.100);
+     5px 5px 5px rgba(0, 0, 0, 0.1),
+    -5px -5px 5px rgba(255, 255, 255, 0.872);
   background: transparent;
 }
 
@@ -70,20 +70,20 @@ color: hsl(228, 10%, 90%);
 .btn.active,
 .sub-btn.active {
   color: hsla(0, 0%, 100%, 0.5);
-  background: linear-gradient(180deg, hsl(0, 0%, 20%), hsl(0, 0%, 10%));
   box-shadow:
-    inset  3px 3px 3px rgba(0, 0, 0, 1),
-    inset -3px -3px 3px rgba(255, 255, 255, 0.100);
+     inset 5px 5px 5px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.872);
+  background: transparent;
   transform: scale(0.95);
 
 }
 
 .tabs-bar {
-  background: hsl(0, 0%, 10%);
+  background: hsl(0, 0%, 95%);
   box-shadow:
-  inset 0px 0px 20px rgba(0, 0, 0, 0.5),     /* esquerda */
-  inset 0px -20px 20px rgba(0, 0, 0, 0.2);    /* direita */
+  0px 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 100px;
+  border: solid 1.3px hsl(0, 0%, 100%);
   padding: 0.8em 1.5rem;
 }
 
@@ -158,10 +158,10 @@ color: hsl(228, 10%, 90%);
   width: 90%;
   max-width: 720px;
   border-radius: 20px;
-  background: hsl(0, 0%, 23%);
+  background: hsl(0, 0%, 100%);
+  border: solid 1.5px hsl(0, 0%, 100%);
   box-shadow:
-    5px 5px 10px hsl(0, 0%, 40%),
-    -5px -5px 10px rgb(255, 255, 255);
+    0px 5px 50px hsla(0, 0%, 40%, 0.2);
 }
 
 /* ============== CONTEÚDO DAS ABAS ============== */
@@ -169,14 +169,14 @@ color: hsl(228, 10%, 90%);
   display: none;
   margin-top: 1.6rem;
   font-size: 1rem;
-  color: hsl(228, 10%, 90%);
+  color: hsl(0, 0%, 30%);
   line-height: 1.5;
   border-radius: 10px;
   padding: 1rem;
-  background: hsl(0, 0%, 10%);
+  background: hsl(0, 0%, 99%);
+  border: solid 1.1px hsl(0, 0%, 100%);
   box-shadow:
-  inset 0px 20px 20px rgba(0, 0, 0, 0.5),     /* esquerda */
-  inset 0px 0px 20px rgba(22, 22, 22, 0.9);    /* direita */
+    0px 5px 50px hsla(0, 0%, 40%, 0.3);
 }
 
 
