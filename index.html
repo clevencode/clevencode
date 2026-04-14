@@ -7,80 +7,210 @@
   <meta name="description" content="Portfólio de Clevenider Petit – Estudante de Análise e Desenvolvimento de Sistemas apaixonado por design limpo e Apple."/>
 
   <!-- Fontes -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="styles/style.css"/>
 </head>
 <body>
 
-  <!-- Header / Hero -->
-  <header class="hero">
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">CP<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-orb hero-orb--3"></div>
+    </div>
     <div class="hero-content">
-      <h1>Clevenider Petit</h1>
-      <p class="tagline">clevencode • design simples • futuro dev</p>
-      <div class="social-hero">
-        <a href="https://github.com/clevencode" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/clevenider-petit-31a77a282" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <p class="hero-greeting">Olá, eu sou</p>
+      <h1 class="hero-name">Clevenider Petit</h1>
+      <p class="hero-role" id="typingText"></p>
+      <div class="hero-cta">
+        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+        <a href="#contato" class="btn btn-outline">Fale Comigo</a>
       </div>
+      <div class="hero-social">
+        <a href="https://github.com/clevencode" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/clevenider-petit-31a77a282" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#sobre"><i class="fas fa-chevron-down"></i></a>
     </div>
   </header>
 
-  <main class="container">
+  <main>
 
     <!-- Sobre -->
-    <section class="about">
-      <img src="img/ele.jpg" alt="Clevenider Petit" class="profile-img"/>
-      <div class="about-text">
-        <h2>Sobre mim</h2>
-        <p>Aluno de <strong>Análise e Desenvolvimento de Sistemas</strong> na Descomplica Digital.</p>
-        <p>Gosto de design simples, interfaces funcionais e minimalistas. A <strong>Apple</strong> é minha maior inspiração.</p>
-        <p>Estou em constante evolução, aprendendo todos os dias e usando IA como aliada para acelerar partes complexas enquanto foco no que realmente amo: <strong>criar experiências bonitas e funcionais</strong>.</p>
+    <section class="section about" id="sobre">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Quem sou eu</span>
+          <h2 class="section-title">Sobre mim</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-image reveal">
+            <div class="about-image-wrapper">
+              <img src="images/eu.jpg" alt="Clevenider Petit" class="profile-img"/>
+              <div class="about-image-border"></div>
+            </div>
+          </div>
+          <div class="about-text reveal">
+            <p>Aluno de <strong>Análise e Desenvolvimento de Sistemas</strong> na Descomplica Digital.</p>
+            <p>Gosto de design simples, interfaces funcionais e minimalistas. A <strong>Apple</strong> é minha maior inspiração.</p>
+            <p>Estou em constante evolução, aprendendo todos os dias e usando IA como aliada para acelerar partes complexas enquanto foco no que realmente amo: <strong>criar experiências bonitas e funcionais</strong>.</p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Projetos</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">ADS</span>
+                <span class="stat-label">Formação</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">&infin;</span>
+                <span class="stat-label">Curiosidade</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tecnologias</span>
+          <h2 class="section-title">Skills & Ferramentas</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+            <h3>HTML5</h3>
+            <p>Estrutura semântica e acessível</p>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+            <h3>CSS3</h3>
+            <p>Layouts modernos e responsivos</p>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fab fa-js"></i></div>
+            <h3>JavaScript</h3>
+            <p>Interatividade e lógica</p>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+            <h3>Git</h3>
+            <p>Controle de versão</p>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fab fa-figma"></i></div>
+            <h3>Design</h3>
+            <p>UI clean inspirado na Apple</p>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+            <h3>IA</h3>
+            <p>IA como aliada no dev</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Projetos -->
-    <section class="projects">
-      <h2>Projetos & Experimentos</h2>
-      <div class="projects-grid">
-        
-        <article class="project-card">
-          <div class="card-inner">
+    <section class="section projects" id="projetos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Meu trabalho</span>
+          <h2 class="section-title">Projetos & Experimentos</h2>
+        </div>
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+            <div class="project-card-glow"></div>
+            <div class="card-header">
+              <i class="fas fa-radio"></i>
+              <div class="card-links">
+                <a href="https://github.com/clevencode/radio-station-ui" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
             <h3>Web Rádio UI</h3>
             <p>Interface moderna de rádio online com player funcional. Feito com HTML, CSS e JS puro + ajuda de IA.</p>
-            <a href="https://github.com/clevencode/radio-station-ui" target="_blank" class="btn">Ver no GitHub</a>
-          </div>
-        </article>
+            <div class="card-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </article>
 
-        <article class="project-card">
-          <div class="card-inner">
+          <article class="project-card reveal">
+            <div class="project-card-glow"></div>
+            <div class="card-header">
+              <i class="fas fa-globe"></i>
+              <div class="card-links">
+                <a href="https://github.com/clevencode/cleven-site" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
             <h3>Site Pessoal v1</h3>
             <p>Meu primeiro portfólio completo. Onde aprendi estrutura semântica e estilização avançada.</p>
-            <a href="https://github.com/clevencode/cleven-site" target="_blank" class="btn">Ver no GitHub</a>
-          </div>
-        </article>
+            <div class="card-tags">
+              <span>HTML</span><span>CSS</span><span>Design</span>
+            </div>
+          </article>
 
-        <!-- Adicione mais projetos aqui no futuro -->
-        
+        </div>
       </div>
     </section>
 
     <!-- Contato -->
-    <section class="contact">
-      <h2>Entre em contato</h2>
-      <p>Fico feliz em responder (principalmente nos fins de semana)</p>
-      <a href="mailto:clevypetit@gmail.com" class="btn large">
-        <i class="fas fa-envelope"></i> Enviar e-mail
-      </a>
+    <section class="section contact" id="contato">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Vamos conversar</span>
+          <h2 class="section-title">Entre em contato</h2>
+        </div>
+        <div class="contact-content reveal">
+          <p class="contact-text">Tenho interesse em oportunidades de estágio e colaborações.<br>Fico feliz em responder (principalmente nos fins de semana).</p>
+          <a href="mailto:clevypetit@gmail.com" class="btn btn-primary btn-lg">
+            <i class="fas fa-envelope"></i> Enviar e-mail
+          </a>
+          <div class="contact-social">
+            <a href="https://github.com/clevencode" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/clevenider-petit-31a77a282" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <footer>
-    <p>© 2025 Clevenider Petit • Feito com ❤️ e muito café</p>
+    <div class="container">
+      <div class="footer-content">
+        <a href="#hero" class="footer-logo">CP<span>.</span></a>
+        <p>&copy; 2025 Clevenider Petit &bull; Feito com <span class="heart">&hearts;</span> e muito café</p>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
