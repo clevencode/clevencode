@@ -2,23 +2,28 @@
 
 ## Cursor Cloud specific instructions
 
-This is a static portfolio website (HTML + CSS + JavaScript vanilla) with no build system, no package manager, and no external dependencies to install.
+Static brand/portfolio site (HTML + CSS + vanilla JS). No build system or package manager.
 
-### Running the site
-
-Serve the files with any static HTTP server from the repo root:
+### Running
 
 ```
 python3 -m http.server 8080
 ```
 
-Then open `http://localhost:8080/` in Chrome.
+Open `http://localhost:8080/` in Chrome.
 
-### Known issues
+### Structure
 
-- **Path mismatch**: `index.html` references `css/style.css`, `js/script.js`, and `img/ele.jpg`, but the actual files are at `styles/style.css`, `scripts/script.js`, and `images/eu.jpg`. The CSS, JS, and image will not load until these paths are corrected in `index.html` or the directories are renamed.
+- `index.html` — page
+- `styles/style.css` — brand tokens and layout
+- `scripts/script.js` — nav + reveal
+- `images/eu.png` — founder portrait
+- `images/logo-icon.svg` / `logo-mark.svg` — mark
 
-### Lint / Test / Build
+### Brand tokens
 
-- There is no linter, test framework, or build system configured in this repo.
-- To validate HTML you can use an external tool like `npx html-validate index.html` (not pre-installed).
+- Blue `#2563EB` — action only
+- Black `#0D1117`
+- Gray `#6B7280` / light `#E5E7EB`
+- White `#FFFFFF`
+- Font: Inter

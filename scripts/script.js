@@ -1,33 +1,32 @@
-/* ============================================
-   Clevenider Petit — Portfólio JS
-   ============================================ */
+/* Clevenider Petit — portfólio JS */
 
 (function () {
   'use strict';
 
-  /* --- Typing Effect --- */
-  const phrases = [
+  var phrases = [
     'Futuro Desenvolvedor Front-End',
     'Amante de Design Minimalista',
     'Estudante de ADS',
     'Inspirado pela Apple'
   ];
-  const typingEl = document.getElementById('typingText');
-  let phraseIdx = 0;
-  let charIdx = 0;
-  let deleting = false;
+  var typingEl = document.getElementById('typingText');
+  var phraseIdx = 0;
+  var charIdx = 0;
+  var deleting = false;
 
   function type() {
-    const current = phrases[phraseIdx];
+    if (!typingEl) return;
+    var current = phrases[phraseIdx];
     if (deleting) {
       charIdx--;
     } else {
       charIdx++;
     }
 
-    typingEl.innerHTML = current.substring(0, charIdx) + '<span class="cursor"></span>';
+    typingEl.innerHTML =
+      current.substring(0, charIdx) + '<span class="cursor"></span>';
 
-    let speed = deleting ? 30 : 60;
+    var speed = deleting ? 30 : 60;
 
     if (!deleting && charIdx === current.length) {
       speed = 2000;
@@ -41,79 +40,80 @@
     setTimeout(type, speed);
   }
 
-  if (typingEl) setTimeout(type, 1200);
+  if (typingEl) setTimeout(type, 800);
 
-  /* --- Navbar scroll effect --- */
-  const navbar = document.getElementById('navbar');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const sections = document.querySelectorAll('.section');
+  var navbar = document.getElementById('navbar');
+  var navToggle = document.getElementById('navToggle');
+  var navMenu = document.querySelector('.nav-links');
+  var navLinks = document.querySelectorAll('.nav-links a');
+  var sections = document.querySelectorAll('main .section, .hero');
 
   function onScroll() {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    if (!navbar) return;
+    navbar.classList.toggle('scrolled', window.scrollY > 8);
 
-    let current = '';
+    var current = 'hero';
     sections.forEach(function (section) {
-      var top = section.offsetTop - 120;
+      var top = section.offsetTop - 100;
       if (window.scrollY >= top) {
-        current = section.getAttribute('id');
+        current = section.getAttribute('id') || current;
       }
     });
 
     navLinks.forEach(function (link) {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
+      var href = link.getAttribute('href');
+      link.classList.toggle('active', href === '#' + current);
     });
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* --- Mobile nav toggle --- */
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.querySelector('.nav-links');
-
-  if (navToggle) {
+  if (navToggle && navMenu) {
     navToggle.addEventListener('click', function () {
-      navToggle.classList.toggle('open');
-      navMenu.classList.toggle('open');
+      var open = navToggle.classList.toggle('open');
+      navMenu.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
     });
 
     navMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navToggle.classList.remove('open');
         navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menu');
       });
     });
   }
 
-  /* --- Smooth scroll for all anchor links --- */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       var target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
-  /* --- Reveal on scroll (Intersection Observer) --- */
-  var revealObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+  if ('IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      revealObserver.observe(el);
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.reveal').forEach(function (el) {
-    revealObserver.observe(el);
-  });
-
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      el.classList.add('visible');
+    });
+  }
 })();

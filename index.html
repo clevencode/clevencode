@@ -2,63 +2,67 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clevenider Petit | Portfólio</title>
-  <meta name="description" content="Portfólio de Clevenider Petit – Estudante de Análise e Desenvolvimento de Sistemas apaixonado por design limpo e Apple."/>
+  <meta name="description" content="Portfólio de Clevenider Petit – Estudante de Análise e Desenvolvimento de Sistemas. Design simples, interfaces funcionais e minimalistas." />
+  <meta name="theme-color" content="#0D1117" />
 
-  <!-- Fontes -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="images/logo-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-
-  <!-- Navbar -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">CP<span>.</span></a>
+      <a href="#hero" class="nav-logo" aria-label="clevencode">
+        <span class="logo-mark" aria-hidden="true">
+          <i></i><i></i><i></i><i class="spark"></i>
+        </span>
+        <span class="logo-word">CP<span class="dot">.</span></span>
+      </a>
       <ul class="nav-links">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- Hero -->
   <header class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="hero-orb hero-orb--1"></div>
-      <div class="hero-orb hero-orb--2"></div>
-      <div class="hero-orb hero-orb--3"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-greeting">Olá, eu sou</p>
-      <h1 class="hero-name">Clevenider Petit</h1>
-      <p class="hero-role" id="typingText"></p>
-      <div class="hero-cta">
-        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-        <a href="#contato" class="btn btn-outline">Fale Comigo</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-greeting">Olá, eu sou</p>
+        <h1 class="hero-name">Clevenider Petit</h1>
+        <p class="hero-role" id="typingText"></p>
+        <div class="hero-cta">
+          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+          <a href="#contato" class="btn btn-outline">Fale Comigo</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com/clevencode" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/clevenider-petit-31a77a282" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-      <div class="hero-social">
-        <a href="https://github.com/clevencode" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/clevenider-petit-31a77a282" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <div class="hero-media">
+        <img
+          src="images/eu.png"
+          alt="Clevenider Petit"
+          class="hero-photo"
+          width="720"
+          height="720"
+        />
       </div>
-    </div>
-    <div class="hero-scroll">
-      <a href="#sobre"><i class="fas fa-chevron-down"></i></a>
     </div>
   </header>
 
   <main>
-
-    <!-- Sobre -->
     <section class="section about" id="sobre">
       <div class="container">
         <div class="section-header">
@@ -66,12 +70,6 @@
           <h2 class="section-title">Sobre mim</h2>
         </div>
         <div class="about-content">
-          <div class="about-image reveal">
-            <div class="about-image-wrapper">
-              <img src="images/eu.jpg" alt="Clevenider Petit" class="profile-img"/>
-              <div class="about-image-border"></div>
-            </div>
-          </div>
           <div class="about-text reveal">
             <p>Aluno de <strong>Análise e Desenvolvimento de Sistemas</strong> na Descomplica Digital.</p>
             <p>Gosto de design simples, interfaces funcionais e minimalistas. A <strong>Apple</strong> é minha maior inspiração.</p>
@@ -95,12 +93,11 @@
       </div>
     </section>
 
-    <!-- Skills -->
     <section class="section skills" id="skills">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Tecnologias</span>
-          <h2 class="section-title">Skills & Ferramentas</h2>
+          <h2 class="section-title">Skills &amp; Ferramentas</h2>
         </div>
         <div class="skills-grid">
           <div class="skill-card reveal">
@@ -137,22 +134,17 @@
       </div>
     </section>
 
-    <!-- Projetos -->
     <section class="section projects" id="projetos">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Meu trabalho</span>
-          <h2 class="section-title">Projetos & Experimentos</h2>
+          <h2 class="section-title">Projetos &amp; Experimentos</h2>
         </div>
         <div class="projects-grid">
-
           <article class="project-card reveal">
-            <div class="project-card-glow"></div>
-            <div class="card-header">
-              <i class="fas fa-radio"></i>
-              <div class="card-links">
-                <a href="https://github.com/clevencode/radio-station-ui" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              </div>
+            <div class="project-meta">
+              <span class="project-label"><i class="fas fa-radio" aria-hidden="true"></i> UI</span>
+              <a href="https://github.com/clevencode/radio-station-ui" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub">GitHub</a>
             </div>
             <h3>Web Rádio UI</h3>
             <p>Interface moderna de rádio online com player funcional. Feito com HTML, CSS e JS puro + ajuda de IA.</p>
@@ -160,14 +152,10 @@
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
           </article>
-
           <article class="project-card reveal">
-            <div class="project-card-glow"></div>
-            <div class="card-header">
-              <i class="fas fa-globe"></i>
-              <div class="card-links">
-                <a href="https://github.com/clevencode/cleven-site" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              </div>
+            <div class="project-meta">
+              <span class="project-label"><i class="fas fa-globe" aria-hidden="true"></i> Site</span>
+              <a href="https://github.com/clevencode/cleven-site" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub">GitHub</a>
             </div>
             <h3>Site Pessoal v1</h3>
             <p>Meu primeiro portfólio completo. Onde aprendi estrutura semântica e estilização avançada.</p>
@@ -175,39 +163,39 @@
               <span>HTML</span><span>CSS</span><span>Design</span>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- Contato -->
     <section class="section contact" id="contato">
-      <div class="container">
+      <div class="container contact-inner">
         <div class="section-header">
           <span class="section-tag">Vamos conversar</span>
           <h2 class="section-title">Entre em contato</h2>
         </div>
         <div class="contact-content reveal">
-          <p class="contact-text">Tenho interesse em oportunidades de estágio e colaborações.<br>Fico feliz em responder (principalmente nos fins de semana).</p>
+          <p class="contact-text">Tenho interesse em oportunidades de estágio e colaborações.<br />Fico feliz em responder (principalmente nos fins de semana).</p>
           <a href="mailto:clevypetit@gmail.com" class="btn btn-primary btn-lg">
-            <i class="fas fa-envelope"></i> Enviar e-mail
+            <i class="fas fa-envelope" aria-hidden="true"></i> Enviar e-mail
           </a>
           <div class="contact-social">
-            <a href="https://github.com/clevencode" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://linkedin.com/in/clevenider-petit-31a77a282" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://github.com/clevencode" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+            <a href="https://linkedin.com/in/clevenider-petit-31a77a282" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-content">
-        <a href="#hero" class="footer-logo">CP<span>.</span></a>
-        <p>&copy; 2025 Clevenider Petit &bull; Feito com <span class="heart">&hearts;</span> e muito café</p>
-      </div>
+    <div class="container footer-content">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-mark" aria-hidden="true">
+          <i></i><i></i><i></i><i class="spark"></i>
+        </span>
+        <span class="logo-word">CP<span class="dot">.</span></span>
+      </a>
+      <p>&copy; 2025 Clevenider Petit &bull; Feito com <span class="heart">&hearts;</span> e muito café</p>
     </div>
   </footer>
 
