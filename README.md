@@ -11,6 +11,7 @@ Visual alinhado ao branding **clevencode**: Swiss / tech minimal, Inter, azul de
 - **Hero** — apresentação, typing e foto
 - **Sobre mim** — bio e estatísticas
 - **Skills & Ferramentas** — tecnologias
+- **Modelos e templates** — produtos prontos para o dia acadêmico
 - **Projetos & Experimentos** — cards de projetos
 - **Contato** — e-mail e redes
 
@@ -26,4 +27,5 @@ Abra `http://localhost:8080/`.
 
 - **E-mail:** clevypetit@gmail.com
 - **GitHub:** [@clevencode](https://github.com/clevencode)
+- **Instagram:** [@clevencode](https://www.instagram.com/clevencode/)
 - **LinkedIn:** [Clevenider Petit](https://linkedin.com/in/clevenider-petit-31a77a282)

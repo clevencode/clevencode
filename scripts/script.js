@@ -4,6 +4,7 @@
   'use strict';
 
   var phrases = [
+    '@clevencode',
     'Futuro Desenvolvedor Front-End',
     'Amante de Design Minimalista',
     'Estudante de ADS',
